@@ -119,12 +119,12 @@ const Order_History = () => {
                 <div style={styles.cart}>
                   {/* Left side - Order ID, Time, and Total Price */}
                   <div style={styles.orderDetails}>
-                    <p style={styles.orderId}>Order ID: {order._id}</p>
-                    <p style={styles.orderTime}>Date: {order.date}</p>
-                    <p style={styles.orderTotal}>
-                      Total Bill: {order.totalPrice}
-                    </p>
-                  </div>
+                  <p style={styles.orderId}>Order ID: {order._id}</p>
+                  <p style={styles.orderTime}>Date: {order.date}</p>
+                  <p style={{ ...styles.orderTotal, color: 'green' }}>
+                    Total Bill: {order.totalPrice} Taka
+                  </p>
+                </div>
 
                   {/* Right side - Table for product details */}
                   <table style={styles.productTable}>

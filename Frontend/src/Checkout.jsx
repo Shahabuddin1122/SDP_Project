@@ -29,14 +29,14 @@ const Checkout = () => {
     let yPos = 20;
 
     // Add background image
-    const backgroundImage = "./images/pdf style.png"; // Replace with the path to your background image
+    const backgroundImage = "https://res.cloudinary.com/dkotituzn/image/upload/v1701192960/h1k78gbncbykmf3cavnf.png"; // Replace with the path to your background image
     const bgWidth = doc.internal.pageSize.getWidth();
     const bgHeight = doc.internal.pageSize.getHeight();
     doc.addImage(backgroundImage, "PNG", 0, 0, bgWidth, bgHeight);
 
     // Add image
     const imgData =
-      "./images/384165997_332969559130939_1111385360839973004_n.png";
+      "https://res.cloudinary.com/dkotituzn/image/upload/v1701194070/fldbsyxtmr09s0zjz67i.png";
     const imgWidth = 50;
     const imgHeight = 20;
     const imgX = (doc.internal.pageSize.getWidth() - imgWidth) / 2;
@@ -279,7 +279,7 @@ const Checkout = () => {
               placeholder="Email address"
               type="text"
             />
-            {console.log(buyerProducts, "shovo")}
+            
             <input
               className={styles.inputName}
               name="name_input"
@@ -345,13 +345,13 @@ const Checkout = () => {
             <img
               className={styles.iconarrowRight}
               alt=""
-              src="/images/iconarrowright4.svg"
+              src="https://res.cloudinary.com/dkotituzn/image/upload/v1701192517/xconraqld104bnfvnvmj.svg"
             />
             <div className={styles.getStarted}>Place order</div>
             <img
               className={styles.iconarrowRight}
               alt=""
-              src="/images/iconarrowright4.svg"
+              src="https://res.cloudinary.com/dkotituzn/image/upload/v1701192517/xconraqld104bnfvnvmj.svg"
             />
           </button>
           {/* <Button
@@ -369,7 +369,7 @@ const Checkout = () => {
                     <img
                       className={styles.tablercurrencyTakaIcon}
                       alt=""
-                      src="/images/tablercurrencytaka1.svg"
+                      src="https://res.cloudinary.com/dkotituzn/image/upload/v1701192451/pnqqexutx4t9ir0j3qyb.svg"
                     />
                     <img
                       className={styles.product2Item}
@@ -386,17 +386,17 @@ const Checkout = () => {
                       <img
                         className={styles.trashChild}
                         alt=""
-                        src="/images/vector-8.svg"
+                        src="https://res.cloudinary.com/dkotituzn/image/upload/v1701192354/elue2k0o5dleioacpye3.svg"
                       />
                       <img
                         className={styles.trashItem}
                         alt=""
-                        src="/images/vector-8.svg"
+                        src="https://res.cloudinary.com/dkotituzn/image/upload/v1701192354/elue2k0o5dleioacpye3.svg"
                       />
                       <img
                         className={styles.trashInner}
                         alt=""
-                        src="/images/rectangle-41.svg"
+                        src="https://res.cloudinary.com/dkotituzn/image/upload/v1701191710/vrlj3drajzs0e01nnmwb.svg"
                       />
                       <div className={styles.ellipseDiv} />
                     </button>
@@ -404,7 +404,7 @@ const Checkout = () => {
                     <img
                       className={styles.jumpTimeDuotoneLineIcon}
                       alt=""
-                      src="/images/jump-time-duotone-line.svg"
+                      src="https://res.cloudinary.com/dkotituzn/image/upload/v1701191486/mwpybfxqvg7o7lhyd7dh.svg"
                     />
                     <div className={styles.gazipurdhaka}>
                       <p
@@ -435,80 +435,28 @@ const Checkout = () => {
                       <img
                         className={styles.component71Child}
                         alt=""
-                        src="/images/group-14701.svg"
+                        src="https://res.cloudinary.com/dkotituzn/image/upload/v1701192603/xpkumfquat05umex00cw.svg"
                       />
                       <img
                         className={styles.path7Copy6}
                         alt=""
-                        src="/images/path-7-copy-6.svg"
+                        src="https://res.cloudinary.com/dkotituzn/image/upload/v1701192744/vzivazbufdhhovqgjzdr.svg"
                       />
                     </div>
                   </div>
                 );
               })}
-            {/* <div className={styles.product2}>
-                    <div className={styles.product2Child} />
-                    <img
-                    className={styles.tablercurrencyTakaIcon}
-                    alt=""
-                    src="/images/tablercurrencytaka1.svg"
-                    />
-                    <img
-                    className={styles.product2Item}
-                    alt=""
-                    src="/images/rectangle-42@2x.png"
-                    />
-                    <button className={styles.trash} id="cancel_button">
-                    <img className={styles.trashChild} alt="" src="/images/vector-8.svg" />
-                    <img className={styles.trashItem} alt="" src="/images/vector-8.svg" />
-                    <img className={styles.trashInner} alt="" src="/images/rectangle-41.svg" />
-                    <div className={styles.ellipseDiv} />
-                    </button>
-                    <div className={styles.div}>1000</div>
-                    <img
-                    className={styles.jumpTimeDuotoneLineIcon}
-                    alt=""
-                    src="/images/jump-time-duotone-line.svg"
-                    />
-                    <div className={styles.gazipurdhaka}>
-                    <p className={styles.blankLine}>Gazipur,Dhaka</p>
-                    <p className={styles.blankLine}>&nbsp;</p>
-                    <p className={styles.blankLine}>&nbsp;</p>
-                    <p className={styles.blankLine}>&nbsp;</p>
-                    <p className={styles.blankLine}>&nbsp;</p>
-                    <p className={styles.blankLine}>&nbsp;</p>
-                    <p className={styles.blankLine}>&nbsp;</p>
-                    </div>
-                    <b className={styles.benaroshiSaree}>Benaroshi Saree</b>
-                    <div className={styles.component71}>
-                        <button className={styles.minus} id="minus_button" />
-                        <div className={styles.count}>1</div>
-                        <button className={styles.plus} id="plus_button" />
-                        <img
-                        className={styles.component71Child}
-                        alt=""
-                            src="/images/group-14701.svg"
-                        />
-                        <img
-                            className={styles.path7Copy6}
-                            alt=""
-                            src="/images/path-7-copy-6.svg"
-                            />
-                            </div>
-                        </div> */}
+            
           </div>
           <div className={styles.selectedItems1}>Selected Items</div>
           <div className={styles.checkoutFrame}>
             <div className={styles.checkout1}>Checkout</div>
-            <a className={styles.notLoggedInContainer} id="login">
-              <span>Not logged in?</span>
-              <span className={styles.clickHereTo}> Click here to login</span>
-            </a>
+            
             <div className={styles.content}>
               <div className={styles.divider}>
                 <div className={styles.divider1} />
               </div>
-              <div className={styles.or}>OR</div>
+              <div className={styles.or}>Welcome</div>
               <div className={styles.divider}>
                 <div className={styles.divider1} />
               </div>
