@@ -23,7 +23,7 @@ export default function ProductListing() {
     //For storing the products from database
     const [productCount, setCount] = useState(0);
 
-    const perPage = 4;
+    const perPage = 8;
     const [showCount, setShowCount] = useState(perPage);
     const [products, setProducts] = useState([]);
     // For collapsible menu in filtering

@@ -20,7 +20,7 @@ export default function KnowTheCraft() {
     const [messageset, setmessagesetter] = useState(false);
     const [productCount, setCount] = useState(0);
 
-    const perPage = 4;
+    const perPage = 8;
     const [showCount, setShowCount] = useState(perPage);
 
     const [products, setProducts] = useState([]);
