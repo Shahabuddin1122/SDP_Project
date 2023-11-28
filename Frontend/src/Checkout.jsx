@@ -153,7 +153,7 @@ const Checkout = () => {
   const id = sessionStorage.getItem("buyer_id");
   const navigate = useNavigate();
   useEffect(() => {
-    axios.get(`http://localhost:3000/get-buyer-info/${id}`).then((response) => {
+    axios.get(`https://heritage-u8vo.onrender.com/get-buyer-info/${id}`).then((response) => {
       // console.log(response.data.products);
       setBuyer(response.data.buyer);
       if (response.data.cartProducts) {
@@ -193,7 +193,7 @@ const Checkout = () => {
     // console.log(orderData);
     const saveData = async () => {
       const response = await axios
-        .post(`http://localhost:3000/get-buyer-info/${id}`, orderData, {
+        .post(`https://heritage-u8vo.onrender.com/get-buyer-info/${id}`, orderData, {
           headers: {
             "Content-Type": "application/json",
           },
@@ -210,7 +210,7 @@ const Checkout = () => {
     };
     const deleteData = async () => {
       const response = await axios.delete(
-        `http://localhost:3000/get-buyer-info/${id}`
+        `https://heritage-u8vo.onrender.com/get-buyer-info/${id}`
       );
       return response.status;
     };
@@ -250,7 +250,7 @@ const Checkout = () => {
       (item) => item.productId._id !== productId
     );
     const response = await axios.put(
-      `http://localhost:3000/get-buyer-info/${productId}`
+      `https://heritage-u8vo.onrender.com/get-buyer-info/${productId}`
     );
     console.log(response);
     setBuyerProducts(updatedProducts);

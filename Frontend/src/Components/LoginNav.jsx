@@ -24,7 +24,7 @@ const Navbar = (props) =>{
       props.callback2(data)
     }
   useEffect(() => {
-    axios.get(`http://localhost:3000/seller_profile/${sellerId}`)
+    axios.get(`https://heritage-u8vo.onrender.com/seller_profile/${sellerId}`)
       .then((response) => {
         console.log(response.data._id)
         setData(response.data);

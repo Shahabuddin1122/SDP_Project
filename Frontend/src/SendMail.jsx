@@ -26,7 +26,7 @@ const handleSubmit = async (e) => {
       return;
     }
     
-    axios.post(`http://localhost:3000/matchemail`, { email }) // Send the email value in the request
+    axios.post(`https://heritage-u8vo.onrender.com/matchemail`, { email }) // Send the email value in the request
       .then((response) => {
         // console.log("mail sent to backend");
         // if (response.data.status === "Success") {

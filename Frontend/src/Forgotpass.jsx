@@ -24,7 +24,7 @@ const Forgotpass = () => {
     e.preventDefault();
 
     if (newPassword === confirmPassword) {
-      axios.put(`http://localhost:3000/forgotpass/${email}`, { password: newPassword })
+      axios.put(`https://heritage-u8vo.onrender.com/forgotpass/${email}`, { password: newPassword })
           // password: newPassword,
         // )
         .then((response) => {
@@ -40,7 +40,7 @@ const Forgotpass = () => {
           console.error("API request failed:", error);
         });
 
-        axios.post(`http://localhost:3000/notifications`,{
+        axios.post(`https://heritage-u8vo.onrender.com/notifications`,{
           senderId: user,
           receiverId: user,
           notificationDescription: ' Changed your Password'

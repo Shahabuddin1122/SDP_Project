@@ -23,7 +23,7 @@ const BuyerProfileBox = (props) => {
   
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/buyer_profile/${buyerId}`)
+    axios.get(`https://heritage-u8vo.onrender.com/buyer_profile/${buyerId}`)
       .then((response) => {
         setData(response.data);
 

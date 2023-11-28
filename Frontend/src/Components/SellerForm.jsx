@@ -90,7 +90,7 @@ const SellerForm = () => {
 
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/seller_profile/${sellerId}`)
+    axios.get(`https://heritage-u8vo.onrender.com/seller_profile/${sellerId}`)
       .then((response) => {
         // console.log(response.data.email)
         setData(response.data);
@@ -111,8 +111,8 @@ const SellerForm = () => {
 
     setIsSaving(true);
 
-    axios.put(`http://localhost:3000/seller_profile/${sellerId}`, newData)
-    // axios.put(`http://localhost:3000/buyer_profile`, newData)
+    axios.put(`https://heritage-u8vo.onrender.com/seller_profile/${sellerId}`, newData)
+    // axios.put(`https://heritage-u8vo.onrender.com/buyer_profile`, newData)
       .then((response) => {
         setIsSaving(false);
         setData(response.data);
@@ -132,7 +132,7 @@ const SellerForm = () => {
         try {
 
           console.log(email);
-            const verify_code = await axios.post(`http://localhost:3000/verify2/${email}`, {
+            const verify_code = await axios.post(`https://heritage-u8vo.onrender.com/verify2/${email}`, {
                 
                 headers: {
                     'Content-Type': 'application/json',

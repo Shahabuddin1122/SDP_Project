@@ -23,7 +23,7 @@ export default function SellerProductListing() {
 
 
     useEffect(() => {
-        axios.get(`http://localhost:3000/seller_product_list/${sellerId}`)
+        axios.get(`https://heritage-u8vo.onrender.com/seller_product_list/${sellerId}`)
             .then((response) => {
                 // console.log(response.data);
                 setProducts(response.data);

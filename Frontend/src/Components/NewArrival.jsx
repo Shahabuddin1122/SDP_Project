@@ -11,7 +11,7 @@ const NewArrival = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/new_arrival')
+    axios.get('https://heritage-u8vo.onrender.com/new_arrival')
       .then(response => {
         setProducts(response.data);
         // console.log(products[0]);

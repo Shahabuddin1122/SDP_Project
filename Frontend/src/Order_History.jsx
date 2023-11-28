@@ -37,14 +37,14 @@ const Order_History = () => {
     const fetchData = async () => {
       try {
         const buyerInfoResponse = await axios.get(
-          `http://localhost:3000/get-buyer-info/${id}`
+          `https://heritage-u8vo.onrender.com/get-buyer-info/${id}`
         );
         // console.log(buyerInfoResponse.data.buyer, "shovo");
         setBuyer(buyerInfoResponse.data.buyer);
 
         if (id) {
           const ordersResponse = await axios.get(
-            `http://localhost:3000/api/orders/${id}`
+            `https://heritage-u8vo.onrender.com/api/orders/${id}`
           );
           const sortedOrders = ordersResponse.data.orders.sort((a, b) => {
             // Convert date strings to Date objects for proper comparison
@@ -82,7 +82,7 @@ const Order_History = () => {
     const deleteCart = async () => {
       try {
         const deleteResponse = await axios.delete(
-          `http://localhost:3000/delete-cart/${id}`
+          `https://heritage-u8vo.onrender.com/delete-cart/${id}`
         );
         console.log(deleteResponse);
       } catch (error) {
@@ -93,7 +93,7 @@ const Order_History = () => {
     const reorder = async () => {
       try {
         const cartResponse = await axios.post(
-          `http://localhost:3000/reorder/${id}`,
+          `https://heritage-u8vo.onrender.com/reorder/${id}`,
           order
         );
         console.log(cartResponse.data.cart, "shovo");

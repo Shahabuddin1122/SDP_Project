@@ -15,7 +15,7 @@ const Become_seller = ()=>{
             <Know_Nav/>
             <div className={Style.upper}>
                 <div className={Style.image}>
-                    <img src="./images/384140578_1344999119451455_8434272048076096664_n.jpg"  alt="" />
+                    <img src={"https://res.cloudinary.com/dkotituzn/image/upload/v1701188742/x4bdhs73ebhtswvaqgdf.png"}  alt="" />
                     <div className={Style.text}>
                         <h4>Craft your Dreams,Share your <br/> Passion:Become a Seller <br /> Today! </h4>
                         <p>Sell Your HandCrafted Items with us!</p>

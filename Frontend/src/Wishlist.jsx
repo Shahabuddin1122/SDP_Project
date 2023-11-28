@@ -11,7 +11,7 @@ export default function ViewWishlist() {
     const [wishProducts, setwishProducts] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://localhost:3000/wishlist/${buyerId}`)
+        axios.get(`https://heritage-u8vo.onrender.com/wishlist/${buyerId}`)
             .then((response) => {
                 console.log(response.data.wishlistItems);
                 setwishProducts(response.data.wishlistItems);
@@ -20,7 +20,7 @@ export default function ViewWishlist() {
 
 
     const clearWishlist = async () => {
-        axios.delete(`http://localhost:3000/delete/wishlist/${buyerId}`)
+        axios.delete(`https://heritage-u8vo.onrender.com/delete/wishlist/${buyerId}`)
             .then((response) => {
                 window.location.reload();
             })

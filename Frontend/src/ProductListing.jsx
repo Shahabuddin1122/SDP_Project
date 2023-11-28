@@ -23,7 +23,7 @@ export default function ProductListing() {
     //For storing the products from database
     const [productCount, setCount] = useState(0);
 
-    const perPage = 4;
+    const perPage = 8;
     const [showCount, setShowCount] = useState(perPage);
     const [products, setProducts] = useState([]);
     // For collapsible menu in filtering
@@ -129,7 +129,7 @@ export default function ProductListing() {
     const searching = () => {
         clearFiltering();
         clearSorting();
-        axios.get(`http://localhost:3000/product-listing?search=${searchText}`)
+        axios.get(`https://heritage-u8vo.onrender.com/product-listing?search=${searchText}`)
             .then((response) => {
                 // console.log("The filtered response is\n", response);
                 // console.log("The filtered data is\n", response.data);
@@ -141,7 +141,7 @@ export default function ProductListing() {
     }
 
     const filtering = () => {
-        axios.get(`http://localhost:3000/product-listing?search=${searchText}&category=${selectedCategory}&district=${districtValue}&division=${divisionValue}&rating=${selectedRating}&price[gte]=${minPrice}&price[lte]=${maxPrice}&sort=${sortBy}`)
+        axios.get(`https://heritage-u8vo.onrender.com/product-listing?search=${searchText}&category=${selectedCategory}&district=${districtValue}&division=${divisionValue}&rating=${selectedRating}&price[gte]=${minPrice}&price[lte]=${maxPrice}&sort=${sortBy}`)
             .then((response) => {
                 // console.log("The filtered response is\n", response);
                 // console.log("The filtered data is\n", response.data);
@@ -155,7 +155,7 @@ export default function ProductListing() {
 
     useEffect(() => {
         // console.log("The sort by is: ", sortBy);
-        axios.get(`http://localhost:3000/product-listing?search=${searchText}&category=${selectedCategory}&district=${districtValue}&division=${divisionValue}&rating=${selectedRating}&price[gte]=${minPrice}&price[lte]=${maxPrice}&sort=${sortBy}`)
+        axios.get(`https://heritage-u8vo.onrender.com/product-listing?search=${searchText}&category=${selectedCategory}&district=${districtValue}&division=${divisionValue}&rating=${selectedRating}&price[gte]=${minPrice}&price[lte]=${maxPrice}&sort=${sortBy}`)
             .then((response) => {
                 // console.log(response.data);
                 setProducts(response.data);
@@ -166,7 +166,7 @@ export default function ProductListing() {
     }, [sortBy]);
 
     useEffect(() => {
-        axios.get(`http://localhost:3000/product-listing`)
+        axios.get(`https://heritage-u8vo.onrender.com/product-listing`)
             .then((response) => {
                 // console.log(response.data);
                 setProducts(response.data);

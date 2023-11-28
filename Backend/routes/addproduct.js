@@ -20,11 +20,11 @@ router.post('/', upload.fields([
   { name: 'Product_img3', maxCount: 1 },
 ]), async (req, res) => {
   try {
-    const { sellerId, productName, price, storedQuantity, district, division, description, category} = req.body;
+    const { sellerId, productName, price, storedQuantity, district, division, description, category, color} = req.body;
     // const size = JSON.parse(req.body.size);
-    const color = req.body.color.split(','); // Assuming colors are provided as a comma-separated string
-    const sizesDimensions = JSON.parse(req.body.sizesDimensions); // Assuming sizesDimensions is a JSON string
-    const sizesOther = req.body.sizesOther.split(','); // Assuming sizesOther is provided as a comma-separated string
+    // const color = req.body.color.split(','); // Assuming colors are provided as a comma-separated string
+    // const sizesDimensions = JSON.parse(req.body.sizesDimensions); 
+    // const sizesOther = req.body.sizesOther.split(','); 
     const Img1 = req.files['Product_img1'][0];
     const Img2 = req.files['Product_img2'][0];
     const Img3 = req.files['Product_img3'][0];
@@ -55,10 +55,10 @@ router.post('/', upload.fields([
           division,
           description,
           category,
-          size: {
-            dimension: sizesDimensions,
-            other: sizesOther,
-          },
+          // size: {
+          //   dimension: sizesDimensions,
+          //   other: sizesOther,
+          // },
           // size,
           color,
           Product_img1: img1_url,

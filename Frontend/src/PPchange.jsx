@@ -26,7 +26,7 @@ const ProfilePictureChange = () => {
       });
 
       // Use Axios to send the image to the backend
-      axios.post(`http://localhost:3000/changepic/${buyerId}`, formData)
+      axios.post(`https://heritage-u8vo.onrender.com/changepic/${buyerId}`, formData)
         .then(response => {
           // Handle the response from the server
           console.log('Server response:', response.data);

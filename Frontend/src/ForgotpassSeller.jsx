@@ -24,7 +24,7 @@ const Forgotpass = () => {
     e.preventDefault();
 
     if (newPassword === confirmPassword) {
-      axios.put(`http://localhost:3000/forgotpass_seller/${email}`, { password: newPassword })
+      axios.put(`https://heritage-u8vo.onrender.com/forgotpass_seller/${email}`, { password: newPassword })
           // password: newPassword,
         // )
         .then((response) => {

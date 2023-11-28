@@ -40,7 +40,7 @@ const Authentication = (props) => {
             }
 
             if (code == data1) {
-                const response = await axios.post('http://localhost:3000/register', formDataToSend, {
+                const response = await axios.post('https://heritage-u8vo.onrender.com/register', formDataToSend, {
                     headers: {
                         'Content-Type': 'multipart/form-data',
                     },
