@@ -72,11 +72,11 @@ const Forgotpass = () => {
       </button>
       <div className={styles.rectangleParent}>
         <div className={styles.groupChild} />
-        <img className={styles.groupItem} alt="" src="./images/rectangle-649@2x.png" />
+        <img className={styles.groupItem} alt="" src="https://res.cloudinary.com/dkotituzn/image/upload/v1701194595/gmqn1zuptk08or1vx9dr.png" />
         <img
           className={styles.screenshot202309081712032}
           alt=""
-          src="./images/screenshot-20230908-171203-2@2x.png"
+          src="https://res.cloudinary.com/dkotituzn/image/upload/v1701181973/oi3hbp6e9isxhlgmg5nc.png"
         />
       </div>
       <div className={styles.forgotpassChild} />

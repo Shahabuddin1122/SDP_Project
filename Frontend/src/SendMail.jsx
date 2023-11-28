@@ -91,11 +91,11 @@ const handleSubmit = async (e) => {
       </form>
       <div className={styles.rectangleParent}>
         <div className={styles.groupChild} />
-        <img className={styles.groupItem} alt="" src="./images/download.jpg" />
+        <img className={styles.groupItem} alt="" src="https://res.cloudinary.com/dkotituzn/image/upload/v1701193936/qgxprqtbdiulv7bpbz06.jpg" />
         <img
           className={styles.screenshot202309081712032}
           alt=""
-          src="./images/screenshot-20230908-171203-2@2x.png"
+          src="https://res.cloudinary.com/dkotituzn/image/upload/v1701181973/oi3hbp6e9isxhlgmg5nc.png"
         />
       </div>
     </div>
