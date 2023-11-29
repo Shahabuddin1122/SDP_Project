@@ -23,7 +23,7 @@ export default function IndividualKnowTheCraft() {
         setmessagesetter(false)
     }
     useEffect(() => {
-        axios.get(`http://localhost:3000/know-the-craft/${id}`)
+        axios.get(`https://heritage-u8vo.onrender.com/know-the-craft/${id}`)
             .then(response => {
                 // console.log(response);
                 // console.log("the data is\n", response.data);

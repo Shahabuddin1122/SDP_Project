@@ -57,7 +57,7 @@ const PassChangeVerifySeller = (props)=>{
                     <button className={style.bt} onClick={closemodel}>X</button>
                     <div className={style.inner}>
                         <div className={style.image}>
-                            <img src="../images/384165997_332969559130939_1111385360839973004_n.png" alt="" />
+                            <img src="https://res.cloudinary.com/dkotituzn/image/upload/v1701181973/oi3hbp6e9isxhlgmg5nc.png" alt="" />
                         </div>
                         <h2>User Authentication</h2>
                         <p>We have send verification code to your gmail</p>

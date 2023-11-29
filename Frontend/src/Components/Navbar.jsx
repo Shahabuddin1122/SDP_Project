@@ -26,7 +26,7 @@ const Navbar = (props) => {
 
   useEffect(() => {
     console.log(buyerId);
-    axios.get(`http://localhost:3000/get/notifications/${buyerId}`)
+    axios.get(`https://heritage-u8vo.onrender.com/get/notifications/${buyerId}`)
       .then((response) => {
         console.log(response.data);
         if (response.data.notifications != 0) {
@@ -47,7 +47,7 @@ const Navbar = (props) => {
 
 
   const clearNotification = async () => {
-    axios.delete(`http://localhost:3000/delete/notifications/${buyerId}`)
+    axios.delete(`https://heritage-u8vo.onrender.com/delete/notifications/${buyerId}`)
       .then((response) => {
         window.location.reload();
       })

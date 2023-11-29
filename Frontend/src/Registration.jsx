@@ -93,7 +93,7 @@ const Registration = () => {
                 }
             }
 
-            const verify_code = await axios.post('http://localhost:3000/verify', formData, {
+            const verify_code = await axios.post('https://heritage-u8vo.onrender.com/verify', formData, {
                 headers: {
                     'Content-Type': 'application/json',
                 },

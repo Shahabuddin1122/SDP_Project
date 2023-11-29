@@ -82,7 +82,7 @@ io.on("connection",(socket) =>{
 })
 
 // useEffect(()=>{
-//     axios.post(`http://localhost:3000//notifications`,{
+//     axios.post(`https://heritage-u8vo.onrender.com//notifications`,{
 //       senderId: user,
 //       receiverId: user,
 //       notificationDescription: 'Changed your Profile'

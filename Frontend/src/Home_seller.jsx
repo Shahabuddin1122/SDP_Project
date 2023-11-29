@@ -82,7 +82,7 @@ const Home_seller = ()=>{
         const id = sessionStorage.getItem("seller_id");
         // const id = "651c5377783c0719018cd17f";
         console.log(id);
-        axios.get(`http://localhost:3000/order_seller/${id}`)
+        axios.get(`https://heritage-u8vo.onrender.com/order_seller/${id}`)
           .then((response) => {
             console.log(response.data);
             const mappedData = response.data.map((order, index) => ({
@@ -99,7 +99,7 @@ const Home_seller = ()=>{
             console.error("Error while fetching data:", error);
           });
         
-        axios.get(`http://localhost:3000/count_customer/${id}`)
+        axios.get(`https://heritage-u8vo.onrender.com/count_customer/${id}`)
         .then((response) => {
             const mappedData = response.data.map((order, index) => ({
                 no: index + 1,
@@ -114,7 +114,7 @@ const Home_seller = ()=>{
         });
 
 
-        axios.get(`http://localhost:3000/HomeSeller/top_product_list/${id}`)
+        axios.get(`https://heritage-u8vo.onrender.com/HomeSeller/top_product_list/${id}`)
         .then((response) => {
             settop_product_list(response.data)
             console.log(response)
@@ -128,7 +128,7 @@ const Home_seller = ()=>{
     }, []);
     useLayoutEffect(()=>{
         const id = sessionStorage.getItem("seller_id");
-        axios.get(`http://localhost:3000/HomeSeller/stat/${id}`)
+        axios.get(`https://heritage-u8vo.onrender.com/HomeSeller/stat/${id}`)
         .then((res) => {
           setstat(res.data);
           console.log("A", res.data);
@@ -169,7 +169,7 @@ const Home_seller = ()=>{
     }
     useLayoutEffect(()=>{
         const id = sessionStorage.getItem("seller_id");
-        axios.get(`http://localhost:3000/HomeSeller/top_product/${id}`)
+        axios.get(`https://heritage-u8vo.onrender.com/HomeSeller/top_product/${id}`)
         .then((res) => {
           settop_product(res.data);
 

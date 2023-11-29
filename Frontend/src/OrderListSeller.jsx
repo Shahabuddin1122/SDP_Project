@@ -10,7 +10,7 @@ const OrderListSeller = () => {
   const sellerId = sessionStorage.getItem("seller_id");
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/orderlist/${sellerId}`)
+    axios.get(`https://heritage-u8vo.onrender.com/orderlist/${sellerId}`)
       .then((response) => 
       {
         console.log(response.data);

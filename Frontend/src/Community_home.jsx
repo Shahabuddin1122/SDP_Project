@@ -38,7 +38,7 @@ const Community_home = ()=>{
         })
         socket?.on('communityMessage', ({ senderId, message, attachment, date }) => {
             console.log('Received community message:', { senderId, message, attachment, date });
-            axios.get(`http://localhost:3000/buyer_profile/${senderId}`)
+            axios.get(`https://heritage-u8vo.onrender.com/buyer_profile/${senderId}`)
             .then((res)=>{
                 console.log("DATA: ",value.valueCopy);
                 setvalue((prevMessages) => {
@@ -63,7 +63,7 @@ const Community_home = ()=>{
           });
     },[socket])
     useEffect(()=>{
-         axios.get(`http://localhost:3000/community`)
+         axios.get(`https://heritage-u8vo.onrender.com/community`)
         .then((res)=>{
             console.log("S: ",res.data)
             setvalue({valueCopy:res.data})
@@ -104,7 +104,7 @@ const Community_home = ()=>{
         formDataToSend.append('img',img);
         setmessage("")
         setimg(null)
-        axios.post(`http://localhost:3000/notifications`,{
+        axios.post(`https://heritage-u8vo.onrender.com/notifications`,{
             senderId: buyerId,
             receiverId: buyerId,
             notificationDescription: ' Posted on community'
@@ -115,7 +115,7 @@ const Community_home = ()=>{
         .catch((err)=>{
             console.error(err);
         })
-        const response = await axios.post('http://localhost:3000/community', formDataToSend, {
+        const response = await axios.post('https://heritage-u8vo.onrender.com/community', formDataToSend, {
             headers: {
                 'Content-Type': 'multipart/form-data',
             },

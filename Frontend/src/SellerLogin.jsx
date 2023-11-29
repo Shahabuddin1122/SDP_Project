@@ -22,7 +22,7 @@ const SellerLogin = () => {
         event.preventDefault();
       
         try {
-          const response = await fetch('http://localhost:3000/seller_login', {
+          const response = await fetch('https://heritage-u8vo.onrender.com/seller_login', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

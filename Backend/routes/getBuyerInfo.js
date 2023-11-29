@@ -56,7 +56,7 @@ router.post("/:id",async(req, res)=>{
 
 router.put("/:id", async (req, res) => {
     const cartItemId = req.params.id;
-    console.log(cartItemId, "Nafis");
+    
     try {
         const validId = new mongoose.Types.ObjectId(cartItemId);
         const deletedCart = await Cart.findOneAndDelete({ productId: validId });

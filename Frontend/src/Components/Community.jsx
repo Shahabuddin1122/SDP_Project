@@ -11,7 +11,7 @@ const Community = () => {
   const [communities, setCommunities] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/community_summary')
+    axios.get('https://heritage-u8vo.onrender.com/community_summary')
       .then(response => setCommunities(response.data))
       .catch(error => console.error(error));
   }, []);

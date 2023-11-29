@@ -58,7 +58,7 @@ export default function IndividualProduct() {
         return productData;
     }
     useEffect(() => {
-        axios.get(`http://localhost:3000/product-listing/${id}`)
+        axios.get(`https://heritage-u8vo.onrender.com/product-listing/${id}`)
             .then((response) => {
                 console.log("The data is", response.data);
                 setProduct(response.data[0].productId);
@@ -66,7 +66,7 @@ export default function IndividualProduct() {
                 setImage(response.data[0].productId.Product_img1?response.data[0].productId.Product_img1:fillerImage);
             })
 
-        axios.get(`http://localhost:3000/reviews/${id}`)
+        axios.get(`https://heritage-u8vo.onrender.com/reviews/${id}`)
             .then((response) => {
                 console.log("The reviews are:", response.data.reviews);
                 if (response.data.reviews != 0) {
@@ -79,7 +79,7 @@ export default function IndividualProduct() {
     const handleChat = () => {
         const { _id: SellerId } = seller;
 
-        axios.post('http://localhost:3000/message/conversation', {
+        axios.post('https://heritage-u8vo.onrender.com/message/conversation', {
             receiverId: SellerId,
             senderId: buyerId
         })
@@ -90,7 +90,7 @@ export default function IndividualProduct() {
             .catch(error => {
                 console.error(error);
             });
-        axios.post(`http://localhost:3000/notifications`, {
+        axios.post(`https://heritage-u8vo.onrender.com/notifications`, {
             senderId: buyerId,
             receiverId: SellerId,
             notificationDescription: ' Messaged you'
@@ -112,7 +112,7 @@ export default function IndividualProduct() {
                 buyerId
             }
             // const saveData = async () => {
-            //     const savedData = await axios.post(`http://localhost:3000/checkout`, product, {
+            //     const savedData = await axios.post(`https://heritage-u8vo.onrender.com/checkout`, product, {
             //         headers: {
             //             'Content-Type': 'application/json',
             //         },
@@ -120,7 +120,7 @@ export default function IndividualProduct() {
             //     // console.log("Already added to cart data", savedData);
             //     return savedData;
             // }
-            axios.post(`http://localhost:3000/checkout`, product, {
+            axios.post(`https://heritage-u8vo.onrender.com/checkout`, product, {
                 headers: {
                     'Content-Type': 'application/json',
                 },
@@ -155,7 +155,7 @@ export default function IndividualProduct() {
         e.preventDefault();
         const reviewData = setvalue();
         console.log(reviewData);
-        axios.post('http://localhost:3000/add/review', reviewData)
+        axios.post('https://heritage-u8vo.onrender.com/add/review', reviewData)
             .then((response) => {
                 //console.log(response.data);
                 window.location.reload();
@@ -164,7 +164,7 @@ export default function IndividualProduct() {
 
     const addToWishlist = async () => {
         const wishlistData = setWishlist();
-        axios.post('http://localhost:3000/create/wishlist', wishlistData)
+        axios.post('https://heritage-u8vo.onrender.com/create/wishlist', wishlistData)
             .then((response) => {
                 alert('Product added to wishlist successfully');
                 setWishlistButton(<FaHeart size={30} color="var(--accent-color)" />);

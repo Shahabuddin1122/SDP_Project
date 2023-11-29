@@ -117,6 +117,9 @@ app.use("/update_product", update_product);
 const comm_summary = require('./routes/community_summary');
 app.use("/community_summary", comm_summary);
 
+const community = require('./routes/community.js');
+app.use("/community", community);
+
 const new_arrival = require('./routes/new_arrival');
 app.use("/new_arrival", new_arrival);
 

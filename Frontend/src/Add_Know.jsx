@@ -127,7 +127,7 @@ const Add_Know = ()=>{
               }
           const config = {
             method: 'post',
-            url: 'http://localhost:3000/know_nav_seller',
+            url: 'https://heritage-u8vo.onrender.com/know_nav_seller',
             headers: {
               'Content-Type': 'multipart/form-data',
             },

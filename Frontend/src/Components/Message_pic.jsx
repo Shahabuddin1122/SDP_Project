@@ -7,14 +7,14 @@ const message = ({user,post,name,text,pic,attachment,time,id,like})=>{
       setIsLiked(true);  // Set state to true when liked
       
       if(!isLiked){
-          axios.post(`http://localhost:3000/community/${id}`)
+          axios.post(`https://heritage-u8vo.onrender.com/community/${id}`)
             .then((res) => {
               console.log("Updated");
             })
             .catch((err) => {
               console.log(err);
         });
-        axios.post(`http://localhost:3000/notifications`,{
+        axios.post(`https://heritage-u8vo.onrender.com/notifications`,{
             senderId: user,
             receiverId: post,
             notificationDescription: ' Liked your Post'

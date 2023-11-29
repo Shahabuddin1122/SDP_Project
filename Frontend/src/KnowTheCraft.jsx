@@ -20,7 +20,7 @@ export default function KnowTheCraft() {
     const [messageset, setmessagesetter] = useState(false);
     const [productCount, setCount] = useState(0);
 
-    const perPage = 4;
+    const perPage = 8;
     const [showCount, setShowCount] = useState(perPage);
 
     const [products, setProducts] = useState([]);
@@ -67,7 +67,7 @@ export default function KnowTheCraft() {
     const searching = () => {
         clearFiltering();
         clearSorting();
-        axios.get(`http://localhost:3000/know-the-craft?search=${searchText}`)
+        axios.get(`https://heritage-u8vo.onrender.com/know-the-craft?search=${searchText}`)
             .then((response) => {
                 // console.log("The filtered response is\n", response);
                 // console.log("The filtered data is\n", response.data);
@@ -83,7 +83,7 @@ export default function KnowTheCraft() {
     }, [divisionValue])
 
     const filtering = () => {
-        axios.get(`http://localhost:3000/know-the-craft?search=${searchText}&division=${divisionValue}&district=${districtValue}&sort=${sortBy}`)
+        axios.get(`https://heritage-u8vo.onrender.com/know-the-craft?search=${searchText}&division=${divisionValue}&district=${districtValue}&sort=${sortBy}`)
             .then((response) => {
                 // console.log(response.data);
                 setProducts(response.data);
@@ -96,7 +96,7 @@ export default function KnowTheCraft() {
 
     useEffect(()=>{
         // console.log("The sort by is: ", sortBy);
-        axios.get(`http://localhost:3000/know-the-craft?search=${searchText}&division=${divisionValue}&district=${districtValue}&sort=${sortBy}`)
+        axios.get(`https://heritage-u8vo.onrender.com/know-the-craft?search=${searchText}&division=${divisionValue}&district=${districtValue}&sort=${sortBy}`)
             .then((response) => {
                 // console.log(response.data);
                 setProducts(response.data);
@@ -107,7 +107,7 @@ export default function KnowTheCraft() {
     },[sortBy]);
 
     useEffect(() => {
-        axios.get('http://localhost:3000/know-the-craft')
+        axios.get('https://heritage-u8vo.onrender.com/know-the-craft')
             .then((response) => {
                 // console.log(response.data);
                 setProducts(response.data);

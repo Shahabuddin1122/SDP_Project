@@ -24,7 +24,7 @@ const Forgotpass = () => {
     e.preventDefault();
 
     if (newPassword === confirmPassword) {
-      axios.put(`http://localhost:3000/forgotpass/${email}`, { password: newPassword })
+      axios.put(`https://heritage-u8vo.onrender.com/forgotpass/${email}`, { password: newPassword })
           // password: newPassword,
         // )
         .then((response) => {
@@ -40,7 +40,7 @@ const Forgotpass = () => {
           console.error("API request failed:", error);
         });
 
-        axios.post(`http://localhost:3000/notifications`,{
+        axios.post(`https://heritage-u8vo.onrender.com/notifications`,{
           senderId: user,
           receiverId: user,
           notificationDescription: ' Changed your Password'
@@ -85,11 +85,11 @@ const Forgotpass = () => {
       </button>
       <div className={styles.rectangleParent}>
         <div className={styles.groupChild} />
-        <img className={styles.groupItem} alt="" src="./images/rectangle-649@2x.png" />
+        <img className={styles.groupItem} alt="" src="https://res.cloudinary.com/dkotituzn/image/upload/v1701194595/gmqn1zuptk08or1vx9dr.png" />
         <img
           className={styles.screenshot202309081712032}
           alt=""
-          src="./images/screenshot-20230908-171203-2@2x.png"
+          src="https://res.cloudinary.com/dkotituzn/image/upload/v1701181973/oi3hbp6e9isxhlgmg5nc.png"
         />
       </div>
       <div className={styles.forgotpassChild} />

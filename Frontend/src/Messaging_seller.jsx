@@ -33,7 +33,7 @@ const Messaging = (props) => {
     socket?.on('getUsers',users =>{
       console.log('Seller_activeUsers:  ',users)
     })
-    axios.get(`http://localhost:3000/seller_profile/${UserId}`)
+    axios.get(`https://heritage-u8vo.onrender.com/seller_profile/${UserId}`)
     .then((res)=>{
       socket?.on('getMessage',data => {
         console.log("GETMESSAGE: ",res.data)
@@ -74,7 +74,7 @@ const Messaging = (props) => {
 
   const [isLeftHovered, setIsLeftHovered] = useState(false);
   useEffect(()=>{
-    axios.get(`http://localhost:3000/message/conversation_seller/${UserId}`)
+    axios.get(`https://heritage-u8vo.onrender.com/message/conversation_seller/${UserId}`)
     .then((res)=>{
       console.log(res.data)
       const mappedUser = res.data.map((order, index) => ({
@@ -95,7 +95,7 @@ const Messaging = (props) => {
     messageref?.current?.scrollIntoView({behavior:'smooth'})
   },[messages])
   useEffect(()=>{
-    axios.get(`http://localhost:3000/seller_profile/${UserId}`)
+    axios.get(`https://heritage-u8vo.onrender.com/seller_profile/${UserId}`)
     .then((res)=>{
       console.log(res.data.name)
       setuserName(res.data.name)
@@ -118,7 +118,7 @@ const Messaging = (props) => {
     setmessage(value)
   }
   const ConBegin = (id,name,rec)=>{
-    axios.get(`http://localhost:3000/message/${id}`)
+    axios.get(`https://heritage-u8vo.onrender.com/message/${id}`)
     .then((res)=>{
       console.log(res.data)
       setconversationId(id);
@@ -139,7 +139,7 @@ const Messaging = (props) => {
       conversationId,
       message
     });
-    axios.post('http://localhost:3000/message', {
+    axios.post('https://heritage-u8vo.onrender.com/message', {
     conversationId,
     senderId:UserId,
     message

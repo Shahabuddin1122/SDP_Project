@@ -21,7 +21,7 @@ export default function SellerIndividualProduct() {
     const sellerId = sessionStorage.getItem("seller_id");
 
     useEffect(() => {
-        axios.get(`http://localhost:3000/seller_product_list/${sellerId}/${id}`)
+        axios.get(`https://heritage-u8vo.onrender.com/seller_product_list/${sellerId}/${id}`)
             .then((response) => {
                 console.log(response.data);
                 setProduct(response.data);
@@ -37,7 +37,7 @@ export default function SellerIndividualProduct() {
         console.log(updateAmount)
         console.log(operation)
         if (updateAmount > 0) {
-            axios.post(`http://localhost:3000/update_product/${id}`, {
+            axios.post(`https://heritage-u8vo.onrender.com/update_product/${id}`, {
                 updateAmount,
                 operation,
             })

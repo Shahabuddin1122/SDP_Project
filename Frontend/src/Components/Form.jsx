@@ -27,7 +27,7 @@ const EditableInput = ({ defaultValue, onSave }) => {
     // Send the updated data to the server
     onSave(value);
     setIsEditing(false);
-    axios.post(`http://localhost:3000/notifications`,{
+    axios.post(`https://heritage-u8vo.onrender.com/notifications`,{
       senderId: user,
       receiverId: user,
       notificationDescription: ' Changed your Profile'
@@ -91,7 +91,7 @@ const Form = () => {
 
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/buyer_profile/${buyerId}`)
+    axios.get(`https://heritage-u8vo.onrender.com/buyer_profile/${buyerId}`)
       .then((response) => {
         setData(response.data);
         
@@ -111,7 +111,7 @@ const Form = () => {
 
     setIsSaving(true);
 
-    axios.put(`http://localhost:3000/buyer_profile/${buyerId}`, newData)
+    axios.put(`https://heritage-u8vo.onrender.com/buyer_profile/${buyerId}`, newData)
       .then((response) => {
         setIsSaving(false);
         setData(response.data);
@@ -131,14 +131,14 @@ const closemodel = () => {
         try {
 
           console.log(email);
-            const verify_code = await axios.post(`http://localhost:3000/verify2/${email}`, {
+            const verify_code = await axios.post(`https://heritage-u8vo.onrender.com/verify2/${email}`, {
                 
                 headers: {
                     'Content-Type': 'application/json',
                 },
             });
             setCode(verify_code.data.data);
-            axios.post(`http://localhost:3000/notifications`,{
+            axios.post(`https://heritage-u8vo.onrender.com/notifications`,{
               senderId: user,
               receiverId: user,
               notificationDescription: ' Changed your Password'
