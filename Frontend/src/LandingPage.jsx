@@ -4,12 +4,12 @@ import CraftForm from "./Components/CraftForm";
 import Footer from "./Components/Footer.jsx"
 import styles from "./LandingPage.module.css"
 // import Button from "./Components/Button.jsx"
-import JoinCommunity from "./components/JoinCommunity";
-import Community from "./components/Community";
-import KnowAboutCrafts from "./components/KnowAboutCrafts";
-import NewArrival from "./components/NewArrival";
-import Category from "./components/Category";
-import GoToProduct from "./components/GoToProduct";
+import JoinCommunity from "./Components/JoinCommunity";
+import Community from "./Components/Community";
+import KnowAboutCrafts from "./Components/KnowAboutCrafts";
+import NewArrival from "./Components/NewArrival";
+import Category from "./Components/Category";
+import GoToProduct from "./Components/GoToProduct";
 import BuyerProfileBox from "./BuyerProfileBox.jsx";
 import { useState } from "react";
 import Messaging from "./Messaging_buyer";

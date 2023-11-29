@@ -7,7 +7,7 @@ import { KnowCraftCard } from "./Components/Card";
 import Navbar from './Components/Navbar'
 import CraftForm from "./Components/CraftForm";
 import { Link } from "react-router-dom";
-import Button from "./Components/Button";
+import Button from "./Components/Button.jsx";
 import Footer from "./Components/Footer";
 import Division from "./Classes/divisionDistrict";
 import Messaging from "./Messaging_buyer";

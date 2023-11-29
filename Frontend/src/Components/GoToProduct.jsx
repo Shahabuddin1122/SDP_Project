@@ -1,6 +1,7 @@
 import styles from "./GoToProduct.module.css";
 // import { Link } from "react-router-dom";
-import Button from './Button.jsx';
+// import Button from './Button.jsx';
+import Button from "./Button";
 import {useNavigate} from 'react-router-dom';
 
 const GoToProduct = () => {

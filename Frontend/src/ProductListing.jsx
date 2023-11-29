@@ -8,12 +8,12 @@ import Card from "./Components/Card";
 import Navbar from './Components/Navbar';
 import CraftForm from "./Components/CraftForm";
 import { Link } from "react-router-dom";
-import Button from "./Components/Button";
+import Button from "./Components/Button.jsx"
 import Footer from "./Components/Footer";
 import Division from "./Classes/divisionDistrict";
 import { ShowStar } from "./Components/RatingStars";
 import Messaging from "./Messaging_buyer";
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import Notification from "./Notification.jsx";
 import { FaAngleDown } from "react-icons/fa";
 import { FaAngleRight } from "react-icons/fa";
