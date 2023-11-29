@@ -157,27 +157,42 @@ router.post('/:id', async (req, res) => {
 });
 
 
-router.get('/',async (req,res)=>{
+router.get('/', async (req, res) => {
     try {
-
         const community = await Community.find();
-        //console.log(Conversation)
-        const messageData = Promise.all(community.map(async (message) =>{
-            const seller = await Seller.findById(message.senderId)
-            const buyer = await Buyer.findById(message.senderId)
-            if(seller) {
-                return { user: {id:seller.id,pic:seller.img,email: seller.email,name:seller.name,tag:"seller"},id:message.id,message:message.message,attachment:message.attachment,date:message.date,like:message.likes  }
-            }
-            else {
-                return { user: {id:buyer.id,pic:buyer.img,email: buyer.email,name:buyer.name,tag:"buyer"},id:message.id,message:message.message,attachment:message.attachment,date:message.date,like:message.likes  }
-            }
-            
-        }))
+        
+        const messageData = await Promise.all(community.map(async (message) => {
+            const seller = await Seller.findOne({ _id: message.senderId });
+            const buyer = await Buyer.findOne({ _id: message.senderId });
+            console.log(seller)
+            const user = seller
+                ? { id: seller.id, pic: seller.img, email: seller.email, name: seller.name, tag: "seller" }
+                : buyer
+                ? { id: buyer.id, pic: buyer.img, email: buyer.email, name: buyer.name, tag: "buyer" }
+                : null;
 
-        res.send(await messageData);
+            if (user) {
+                return {
+                    user,
+                    id: message._id,
+                    message: message.message,
+                    attachment: message.attachment,
+                    date: message.date,
+                    like: message.likes || 0,
+                };
+            } else {
+                console.error("Seller and Buyer are both null");
+                return null;
+            }
+        }));
+
+        const result = messageData.filter((item) => item !== null);
+        res.send(result);
     } catch (error) {
-        console.log(error,"Error")
+        console.log(error, "Error");
+        res.status(500).send("Internal Server Error");
     }
-})
+});
+
 
 module.exports = router;
